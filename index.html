@@ -1,12 +1,88 @@
 <html>
 <head>
-    <title>Dice Simulator 2015</title>
-    <link rel="stylesheet" href="style.css">
-</head>  
+    <title>Kens calculator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="bootstrap" href="css/bootstrap.css">
+</head>
 <body>
-  <h1>Calculator Example</h1>
-  <p>Open the JavaScript developer console to interact.</p>
-  <script src="calculator.js"></script>
-
+<div class="grid">
+  <div class="centered grid__col--8">
+    <center>
+    <div class="jumbotron">
+      <h1>Calculator</h1>
+    </div>
+  <form id="calculator">
+    <table>
+      <tr>
+        <td>
+          <input type="text" class="display" id="display" disabled>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn-small" id="one" onClick="input('1')">1</button>
+        </td>
+        <td>
+          <button class="btn-small" id="two" onClick="input('2')">2</button>
+        </td>
+        <td>
+          <button class="btn-small" id="three" onClick="input('3')">3</button>
+        </td>
+        <td>
+          <button class="btn-small" id="addition"
+          onClick="operation('+')">+</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button class="btn-small" id="four" onClick="input('4')">4</button>
+        </td>
+        <td>
+          <button class="btn-small" id="five" onClick="input('5')">5</button>
+        </td>
+        <td>
+          <button class="btn-small" id="six" onClick="input('6')">6</button>
+        </td>
+        <td>
+          <button class="btn-small" id="subtract" onClick="operation('-')">-</button>
+        </td>
+       </tr>
+        <tr>
+          <td>
+            <button class="btn-small" id=seven onClick="input('7')">7</button>
+          </td>
+          <td>
+            <button class="btn-small" id="eight" onClick="input('8')">8</button>
+          </td>
+          <td>
+            <button class="btn-small" id="nine" onClick="input('9')">9</button>
+          </td>
+          <td>
+            <button class="btn-small" id="multiply" onClick="operation('*')">x</button>
+          </td>
+        </tr>
+          <tr>
+            <td>
+              <button class="btn-small" id="clear" onClick="del()">c</button>
+            </td>
+            <td>
+              <button class="btn-small" id="zero" onClick="input('0')">0</button>
+            </td>
+            <td>
+              <button class="btn-small" id="equals"onClick="calculatResult()">=</button>
+            </td>
+            <td>
+              <button class="btn-small" id="divide" onClick="operation('/')">/</button>
+            </td>
+          </tr>
+    </table>
+  </form>
+</center>
+</div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+<script src="calculator_ui.js"></script>
+<script src="calculator.js"></script>
 </body>
 </html>

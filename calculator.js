@@ -1,4 +1,12 @@
-var calculator = {
+$(document).ready(function() {
+	$("#form").onCLick(function(e){
+    e.preventDefault();
+	currentValue = $("#display").val();
+  $("#display").val(currentValue);
+});
+
+
+const calculator = {
 		sum: 0,
 		add: function(value) {
       this.sum += value;
@@ -14,6 +22,7 @@ var calculator = {
 		},
     clear: function() {
 			this.sum = 0;
+			$("#display").val(currentValue)
     },
     equals: function() {
 			return this.sum;
